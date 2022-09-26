@@ -1,29 +1,34 @@
-void setup()
-{
-	noLoop();
+void setup(){
+  noLoop();
+  size(500, 500);
 }
-void draw()
-{
-	//your code here
+
+void draw(){
+  background(160);
+  for(int i = 0; i < 300; i += 100){
+    for(int j = 0; j < 300; j += 100){
+      Die obj = new Die(i, j);
+      obj.show();
+    }
+  }
 }
-void mousePressed()
-{
-	redraw();
+
+void mousePressed(){
+  redraw();
 }
-class Die //models one single dice cube
-{
-	//variable declarations here
-	
-	Die(int x, int y) //constructor
-	{
-		//variable initializations here
-	}
-	void roll()
-	{
-		//your code here
-	}
-	void show()
-	{
-		//your code here
-	}
+
+class Die{
+  int xCoord, yCoord, roll;
+  Die(int x, int y){
+    xCoord = x;
+    yCoord = y;
+  }
+  
+  void roll(){
+    
+  }
+  
+  void show(){
+    rect(xCoord, yCoord, 50, 50, 4);
+  }
 }
