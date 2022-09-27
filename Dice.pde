@@ -1,10 +1,11 @@
 void setup() {
   noLoop();
-  size(251, 251);
+  size(251, 500);
 }
 
 void draw() {
   background(160);
+  int total = 0;
   for (int i = 0; i < 300; i += 100) {
     for (int j = 0; j < 300; j += 100) {
       fill(255);
@@ -13,6 +14,8 @@ void draw() {
       obj.roll();
       fill(0);
       text(obj.value, obj.xCoord + 25, obj.yCoord + 25);
+      total += obj.value;
+      text(total, 125, 400);
     }
   }
 }
