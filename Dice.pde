@@ -15,9 +15,9 @@ void draw() {
       fill(0);
       text(obj.value, obj.xCoord + 25, obj.yCoord + 25);
       total += obj.value;
-      text(total, 125, 400);
     }
   }
+  text(total, 125, 400);
 }
 
 void mousePressed() {
